@@ -1,0 +1,30 @@
+<h1> Products!!!</h1>
+
+<table class="table table-hover table-bordered">
+    <a *ngFor="let prod of products">
+        <thead>
+            <tr>
+                <th>Product Code</th>
+                <th>Category</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+    
+        <tr *ngFor="let x of prod.bill">
+            <td>{{x.product.code}}</td>
+            <td>{{x.product.idCategory.nameCategory}}</td>
+            <td>{{x.product.name}}</td>
+            <td>{{x.quantity}}</td>
+            <td>{{x.product.unitCost * x.quantity}}</td>
+        </tr>
+    </a>
+</table>
+
+<button (click)="sendData()">sds</button>
+
+
+
+
+

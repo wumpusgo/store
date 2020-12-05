@@ -1,0 +1,17 @@
+# docker-compose.yml
+version: '3'
+services:
+  database:
+    image: "postgres" # use latest official postgres version
+    container_name: store_postgres
+    network_mode: bridge
+    ports:
+      - "5432:5432"
+    env_file:
+      - database.env # configure postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql
+        #- ./dbscripts/postgres:/inicializarBD.sql 
+        # - ./dbscripts/postgres:/docker-entrypoint-initdb.d 
+volumes:
+  postgres-data: # named volumes can be managed easier using docker-compose

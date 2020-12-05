@@ -1,0 +1,33 @@
+[{
+    "idPurchase": 1,
+    "bill": [
+        {
+            "idBill": 1,
+            "product": {
+                "code": "1",
+                "idCategory": {
+                    "idCategory": 1,
+                    "nameCategory": "Viveres"
+                },
+                "name": "agua",
+                "description": "agua",
+                "unitCost": 1000.0
+            },
+            "quantity": 3
+        },
+        {
+            "idBill": 2,
+            "product": {
+                "code": "2",
+                "idCategory": {
+                    "idCategory": 1,
+                    "nameCategory": "Viveres"
+                },
+                "name": "gaseosa",
+                "description": "gaseosa",
+                "unitCost": 2000.0
+            },
+            "quantity": 6
+        }
+    ]
+}]
