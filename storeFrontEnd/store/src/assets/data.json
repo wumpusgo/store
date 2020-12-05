@@ -28,6 +28,62 @@
                 "unitCost": 2000.0
             },
             "quantity": 6
+        },
+        {
+            "idBill": 3,
+            "product": {
+                "code": "3",
+                "idCategory": {
+                    "idCategory": 1,
+                    "nameCategory": "Viveres"
+                },
+                "name": "galletas",
+                "description": "gaseosa",
+                "unitCost": 3500.0
+            },
+            "quantity": 6
+        },
+        {
+            "idBill": 4,
+            "product": {
+                "code": "4",
+                "idCategory": {
+                    "idCategory": 2,
+                    "nameCategory": "Electronicos"
+                },
+                "name": "tv oled",
+                "description": "gaseosa",
+                "unitCost": 3000000.0
+            },
+            "quantity": 6
+        },
+        {
+            "idBill": 5,
+            "product": {
+                "code": "5",
+                "idCategory": {
+                    "idCategory": 2,
+                    "nameCategory": "Electronicos"
+                },
+                "name": "radio fm",
+                "description": "gaseosa",
+                "unitCost": 250000.0
+            },
+            "quantity": 6
+        },
+        {
+            "idBill": 6,
+            "product": {
+                "code": "6",
+                "idCategory": {
+                    "idCategory": 2,
+                    "nameCategory": "Electronicos"
+                },
+                "name": "mouse y teclado Combo",
+                "description": "gaseosa",
+                "unitCost": 100000.0
+            },
+            "quantity": 6
         }
     ]
 }]
