@@ -15,7 +15,7 @@ export class ProductService {
   jsonURL = 'assets/data.json'
   urlPurchasedPorducts: string = "http://localhost:9090/purchase/load"
   // urlSaveRequest: string = "http://localhost:9090/purchase/save"
-  urlSaveRequest: string = "http://localhost:5000/purchase/send2"
+  urlSaveRequest: string = "http://localhost:9090/purchase/save"
 
   saveCliente(purchases: any) {
     return this.http.post(this.urlSaveRequest, purchases, this.httpOptions);

@@ -1,7 +1,8 @@
 # docker-compose.yml
 version: '3.9'
 services:
-  api_service:
+  javaBackend:
+    image: javabackend
     build:
       context: .
       dockerfile: javaDockerFile  
@@ -24,5 +25,14 @@ services:
       - postgres-data:/var/lib/postgresql
         #- ./dbscripts/postgres:/inicializarBD.sql 
         # - ./dbscripts/postgres:/docker-entrypoint-initdb.d 
+    
+  angular:
+    image: angularclient
+    build:
+     context: ./storeFrontEnd
+     dockerfile: angularDockerFile
+    container_name: angular
+    ports:
+      - 4200:80
 volumes:
   postgres-data: # named volumes can be managed easier using docker-compose
