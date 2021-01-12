@@ -1,5 +1,14 @@
+### STAGE 1: Build ###
+
+FROM maven:3.5.4-jdk-8-alpine as maven
+LABEL stage=builder
+COPY ./storeBackend/pom.xml ./pom.xml
+COPY ./storeBackend/src ./src
+RUN mvn clean install -DskipTests
+
+### STAGE 2: Run ###
 FROM openjdk:8-jdk-alpine
 VOLUME /main-app
-ADD  ./storeBackend/target/storeBackend-0.0.1-SNAPSHOT.jar app.jar
+COPY  --from=maven target/storeBackend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar","/app.jar"]
